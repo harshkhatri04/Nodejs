@@ -1,0 +1,18 @@
+[
+  {
+    "year": 2015,
+    "IndexCrime": 101868
+  },
+  {
+    "year": 2015,
+    "NonIndexCrime": 152390
+  },
+  {
+    "year": 2015,
+    "ViolentCrime": 22817
+  },
+  {
+    "year": 2015,
+    "PropertyCrime": 79051
+  }
+]
