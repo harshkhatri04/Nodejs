@@ -12,7 +12,7 @@
       jasonFormat.primaryType =lineSplit[5];
       jasonFormat.Description= lineSplit[6];                                                                        
       jasonFormat.Year= lineSplit[17];
-      if(jasonFormat.primaryType=== 'THEFT' ){
+      if(jasonFormat.primaryType=== 'ASSAULT' ){
        if(jasonFormat.Description=== 'OVER $500' || jasonFormat.Description=== '$500 AND UNDER'){
        filterValue.push(jasonFormat)
     }}});
@@ -50,5 +50,5 @@
     jasonarray.push(obj)
   }
   var json = JSON.stringify(jasonarray,null,2);
-           fs.writeFileSync('CRIME.json', json);
+           fs.writeFileSync('CRIME1.json', json);
 });   

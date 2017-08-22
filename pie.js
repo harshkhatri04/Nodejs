@@ -27,9 +27,7 @@ rl.on('line', function(line){
           crimeIndex.push(jasonFormat);          
        }
   }
-  if(jasonFormat.FBICODE=== '01B' || jasonFormat.FBICODE=== '08A' 
-      || jasonFormat.FBICODE== '08B'  || jasonFormat.FBICODE== '10' 
-      || jasonFormat.FBICODE== '11' || jasonFormat.FBICODE== '12' 
+  if(jasonFormat.FBICODE=== '01B' || jasonFormat.FBICODE=== '08A' || jasonFormat.FBICODE== '08B'  || jasonFormat.FBICODE== '10' || jasonFormat.FBICODE== '11' || jasonFormat.FBICODE== '12' 
       || jasonFormat.FBICODE== '13' || jasonFormat.FBICODE== '14' 
       || jasonFormat.FBICODE== '15' || jasonFormat.FBICODE== '16'
       || jasonFormat.FBICODE== '17' || jasonFormat.FBICODE== '18'
