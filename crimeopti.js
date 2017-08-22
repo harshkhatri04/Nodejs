@@ -50,5 +50,5 @@
     jasonarray.push(obj)
   }
   var json = JSON.stringify(jasonarray,null,2);
-           fs.writeFileSync('CRIME1.json', json);
+           fs.writeFile('CRIME.json', json);
 });   

@@ -88,7 +88,7 @@ rl.on('close', function(line) {
     jasonarray.push({year : 2015,PropertyCrime});
 
    var json = JSON.stringify(jasonarray,null,2);
-       fs.writeFileSync('piechart.json',json);
+       fs.writeFile('piechart.json',json);
 });
 
      

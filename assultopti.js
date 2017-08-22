@@ -50,5 +50,5 @@
     jasonarray.push(obj)
   }
   var json = JSON.stringify(jasonarray,null,2);
-           fs.writeFileSync('Assultopti.json', json);
+           fs.writeFile('Assultopti.json', json);
 });   
