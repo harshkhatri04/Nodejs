@@ -8,11 +8,11 @@
     });
     rl.on('line', function(line){
       var jasonFormat={};
-      var lineSplit=line.split(',');
+      var lineSplit=line.split(/,(?![^"]*"(?:(?:[^"]*"){2})*[^"]*$)/);
       jasonFormat.primaryType =lineSplit[5];
       jasonFormat.Description= lineSplit[6];                                                                        
       jasonFormat.Year= lineSplit[17];
-      if(jasonFormat.primaryType=== 'ASSAULT' ){
+      if(jasonFormat.primaryType=== 'THEFT' ){
        if(jasonFormat.Description=== 'OVER $500' || jasonFormat.Description=== '$500 AND UNDER'){
        filterValue.push(jasonFormat)
     }}});
@@ -27,8 +27,7 @@
               c[i]++;
       }
       return c;  
-    }, [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
-      console.log(OVER) 
+    }, [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]) 
     var UNDER = filterValue.reduce((c1, ele) => {
         for (var i = 0; i < 16; i++) {
           if(ele.Description== '$500 AND UNDER')
@@ -39,16 +38,14 @@
       }
       return c1;      
     }, [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
-      console.log(UNDER)
-
     for (let k = 0; k< 16; k++) {
     var obj = {
       year: k + 2001,
-     'OVER $500': OVER[k],
-      '$500 AND UNDER': UNDER[k]
+     'OVER$500': OVER[k],
+     'UNDER$500': UNDER[k]
     }
     jasonarray.push(obj)
   }
   var json = JSON.stringify(jasonarray,null,2);
-           fs.writeFile('CRIME.json', json);
+           fs.writeFile('CrimeOpti.json', json);
 });   

@@ -11,7 +11,7 @@ var rl = readline.createInterface({
 
 rl.on('line', function(line){
   var jasonFormat={};
-  var lineSplit=line.split(',');
+  var lineSplit=line.split(/,(?![^"]*"(?:(?:[^"]*"){2})*[^"]*$)/);
   jasonFormat.FBICODE =lineSplit[14];
   jasonFormat.primaryType =lineSplit[5];
   jasonFormat.Description= lineSplit[8];
@@ -82,10 +82,10 @@ rl.on('close', function(line) {
            return c;
    }, 0);
           
-    jasonarray.push({year : 2015,IndexCrime});
-    jasonarray.push({year : 2015,NonIndexCrime});
-    jasonarray.push({year : 2015,ViolentCrime});
-    jasonarray.push({year : 2015,PropertyCrime});
+    jasonarray.push({Crime : 'IndexCrime',count: IndexCrime});
+    jasonarray.push({Crime : 'NonIndexCrime',count: NonIndexCrime});
+    jasonarray.push({Crime : 'ViolentCrime',count: ViolentCrime});
+    jasonarray.push({Crime : 'PropertyCrime',count: PropertyCrime});
 
    var json = JSON.stringify(jasonarray,null,2);
        fs.writeFile('piechart.json',json);

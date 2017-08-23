@@ -1,82 +1,82 @@
 [
   {
     "year": 2001,
-    "Arrested": 6611,
-    "Not Arrested": 22527
+    "Arrested": 7150,
+    "NotArrested": 24233
   },
   {
     "year": 2002,
-    "Arrested": 6732,
-    "Not Arrested": 22487
+    "Arrested": 7340,
+    "NotArrested": 24181
   },
   {
     "year": 2003,
-    "Arrested": 6341,
-    "Not Arrested": 20852
+    "Arrested": 6909,
+    "NotArrested": 22568
   },
   {
     "year": 2004,
-    "Arrested": 6349,
-    "Not Arrested": 19945
+    "Arrested": 7004,
+    "NotArrested": 21846
   },
   {
     "year": 2005,
-    "Arrested": 6020,
-    "Not Arrested": 18683
+    "Arrested": 6631,
+    "NotArrested": 20435
   },
   {
     "year": 2006,
-    "Arrested": 5752,
-    "Not Arrested": 17988
+    "Arrested": 6288,
+    "NotArrested": 19657
   },
   {
     "year": 2007,
-    "Arrested": 6003,
-    "Not Arrested": 18232
+    "Arrested": 6550,
+    "NotArrested": 19764
   },
   {
     "year": 2008,
-    "Arrested": 4754,
-    "Not Arrested": 18545
+    "Arrested": 5316,
+    "NotArrested": 20131
   },
   {
     "year": 2009,
-    "Arrested": 5184,
-    "Not Arrested": 15923
+    "Arrested": 5700,
+    "NotArrested": 17161
   },
   {
     "year": 2010,
-    "Arrested": 4605,
-    "Not Arrested": 15321
+    "Arrested": 5051,
+    "NotArrested": 16484
   },
   {
     "year": 2011,
-    "Arrested": 4780,
-    "Not Arrested": 14200
+    "Arrested": 5185,
+    "NotArrested": 15225
   },
   {
     "year": 2012,
-    "Arrested": 4498,
-    "Not Arrested": 14095
+    "Arrested": 4792,
+    "NotArrested": 15105
   },
   {
     "year": 2013,
-    "Arrested": 4143,
-    "Not Arrested": 12497
+    "Arrested": 4460,
+    "NotArrested": 13511
   },
   {
     "year": 2014,
-    "Arrested": 4191,
-    "Not Arrested": 11565
+    "Arrested": 4495,
+    "NotArrested": 12400
   },
   {
     "year": 2015,
-    "Arrested": 3809,
-    "Not Arrested": 12245
+    "Arrested": 4038,
+    "NotArrested": 12989
   },
   {
     "year": 2016,
-    "Arrested": 859,
-    "Not Arrested": 3800
+    "Arrested": 944,
+    "NotArrested": 4087
   }
 ]

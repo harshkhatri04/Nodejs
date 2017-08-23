@@ -1,18 +1,18 @@
 [
   {
-    "year": 2015,
-    "IndexCrime": 101868
+    "Crime": "IndexCrime",
+    "count": 103931
   },
   {
-    "year": 2015,
-    "NonIndexCrime": 152390
+    "Crime": "NonIndexCrime",
+    "count": 156986
   },
   {
-    "year": 2015,
-    "ViolentCrime": 22817
+    "Crime": "ViolentCrime",
+    "count": 23044
   },
   {
-    "year": 2015,
-    "PropertyCrime": 79051
+    "Crime": "PropertyCrime",
+    "count": 80887
   }
 ]

@@ -8,7 +8,7 @@
     });
     rl.on('line', function(line){
       var jasonFormat={};
-      var lineSplit=line.split(',');
+      var lineSplit=line.split(/,(?![^"]*"(?:(?:[^"]*"){2})*[^"]*$)/);
       jasonFormat.primaryType =lineSplit[5];
       jasonFormat.Description= lineSplit[8];                                                                        
       jasonFormat.Year= lineSplit[17];
@@ -27,8 +27,7 @@
               c[i]++;
       }
       return c;  
-    }, [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
-      console.log(OVER) 
+    }, [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]) 
     var UNDER = filterValue.reduce((c1, ele) => {
         for (var i = 0; i < 16; i++) {
           if(ele.Description== 'false')
@@ -39,13 +38,11 @@
       }
       return c1;      
     }, [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
-      console.log(UNDER)
-
     for (let k = 0; k< 16; k++) {
     var obj = {
       year: k + 2001,
      'Arrested': OVER[k],
-      'Not Arrested': UNDER[k]
+      'NotArrested': UNDER[k]
     }
     jasonarray.push(obj)
   }
