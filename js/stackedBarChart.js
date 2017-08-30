@@ -1,64 +1,4 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-    body {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        width: 960px;
-        height: 500px;
-        position: relative;
-    }
-    svg {
-        width: 100%;
-        height: 100%;
-        position: center;
-    }
-    text{
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
-    .toolTip {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        position: absolute;
-        display: none;
-        width: auto;
-        height: auto;
-        background: none repeat scroll 0 0 white;
-        border: 0 none;
-        border-radius: 8px 8px 8px 8px;
-        box-shadow: -3px 3px 15px #888888;
-        color: black;
-        font: 12px sans-serif;
-        padding: 5px;
-        text-align: center;
-    }
-    .year {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 60%;
-    }
-    text {
-        font: 10px sans-serif;
-    }
-    .axis text {
-        font: 10px sans-serif;
-    }
-    .axis path{
-        fill: none;
-        stroke: #000;
-    }
-    .axis line {
-        fill: none;
-        stroke: #000;
-        shape-rendering: crispEdges;
-    }
-    .x.axis path {
-        display: none;
-    }
-</style>
-<body>
-
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-year/1.7.0/d3-year.min.js"></script>
-<script>
-    function wrap(text, width) {
+ function wrap(text, width) {
         text.each(function() {
             var text = d3.select(this),
                     words = text.text().split(/\s+/).reverse(),
@@ -179,16 +119,14 @@ bar_enter.append("text")
                 divTooltip.style("display", "none");
             });
     svg.append("g")
-            .attr("class", "yearLinear")
+            .attr("class", "legendLinear")
             .attr("transform", "translate(0,"+(height+30)+")");
-    var year = d3.year.color()
+    var legend = d3.legend.color()
             .shapeWidth(height/4)
             .shapePadding(10)
             .orient('horizontal')
             .scale(color);
-    svg.select(".yearLinear")
-            .call(year);
+    svg.select(".legendLinear")
+            .call(legend);
         }
     }
-</script>
-</body>
